@@ -1,5 +1,5 @@
 """
-    Flask-Classy
+    Flask-Classy-P
     ------------
 
     Class based views for the Flask microframework.
@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for more details.
 """
 
-__version__ = "0.6.8"
+__version__ = "0.6.9"
 
 import sys
 import functools
@@ -121,7 +121,7 @@ class FlaskView(object):
 
                 elif name in special_methods:
                     if name in ["get", "index"]:
-                        methods = ["GET"]
+                        methods = ["GET", "POST"]
                     else:
                         methods = [name.upper()]
 
@@ -131,11 +131,12 @@ class FlaskView(object):
                     app.add_url_rule(rule, route_name, proxy, methods=methods, subdomain=subdomain)
 
                 else:
+                    methods = ["GET", "POST"]
                     route_str = '/%s/' % name
                     if not cls.trailing_slash:
                         route_str = route_str.rstrip('/')
                     rule = cls.build_rule(route_str, value)
-                    app.add_url_rule(rule, route_name, proxy, subdomain=subdomain)
+                    app.add_url_rule(rule, route_name, proxy, methods=methods, subdomain=subdomain)
             except DecoratorCompatibilityError:
                 raise DecoratorCompatibilityError("Incompatible decorator detected on %s in class %s" % (name, cls.__name__))
 

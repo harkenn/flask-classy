@@ -1,3 +1,12 @@
+2014-10-27 Robert Burnham <burnhamrobertp@gmail.com>
+
+    Version 0.6.9
+
+    - Features:
+        * Add POST method bindings to all methods. For flask-classy
+          applications which depend upon method type would be ill-advised
+          to use this version.
+
 2013-11-19 Freedom Dumlao <freedomdumlao@gmail.com>
 
     Version 0.6.8

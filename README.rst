@@ -3,6 +3,13 @@ Flask-Classy
 
 .. module:: flask.ext.classy
 
+Flask-Classy-P is a modification of the flask-classy extension which adds
+to the existing functionality by binding all methods to POST in addition to
+GET. This is especially valuable for use in conjunction with AJAX libraries,
+which often send all requests using POST. Original documentation found below:
+
+-- Robert Burnham
+
 Flask-Classy is an extension that adds class-based views to Flask.
 But why?
 

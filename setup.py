@@ -7,15 +7,17 @@ Class based views for Flask
 from setuptools import setup
 
 setup(
-    name='Flask-Classy',
-    version='0.6.8',
-    url='https://github.com/apiguy/flask-classy',
+    name='Flask-Classy-P',
+    version='0.6.9',
+    url='https://github.com/harkenn/flask-classy',
     license='BSD',
     author='Freedom Dumlao',
     author_email='freedomdumlao@gmail.com',
-    description='Class based views for Flask',
+    maintainer='Robert Burnham',
+    maintainer_email='burnhamrobertp@gmail.com',
+    description="Fork of Freedom Dumlao's flask-classy: Class based views for Flask",
     long_description=__doc__,
-    py_modules=['flask_classy'],
+    py_modules=['flask_classy_p'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
